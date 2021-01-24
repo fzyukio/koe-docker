@@ -1,0 +1,17 @@
+# Run this docker ONCE for each local machine
+version: '3.4'
+
+networks:
+  web:
+    driver: bridge
+services:
+  nginx-proxy:
+    container_name: nginx-proxy
+    image: jwilder/nginx-proxy:alpine
+    ports:
+      - "9080:80"
+      - "9443:443"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+    networks:
+      - web

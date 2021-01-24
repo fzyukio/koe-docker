@@ -1,0 +1,5 @@
+backups/
+user_data/
+.env
+settings/settings.yaml
+.idea/
