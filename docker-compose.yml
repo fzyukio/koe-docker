@@ -18,7 +18,7 @@ services:
       - default
   app:
     container_name: ${CONTAINER_APP_NAME}
-    image: crazyfffan/koe:3.1
+    image: crazyfffan/koe:3.2
     networks:
       - default
       - web
